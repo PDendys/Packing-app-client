@@ -1,0 +1,67 @@
+.item--block {
+    padding: 7px 10px 7px 60px;
+    position: relative;
+
+    &:nth-child(odd) {
+        background-color: #DAEEFB;
+    }
+
+    > .checkbox {
+        position: absolute;
+        top: 50%;
+        transform: translate(0, -50%);
+        width: 18px;
+        height: 18px;
+        background-color: #efefef;
+        border-radius: 3px;
+        border: solid 2px #3399CC;
+        box-sizing: border-box;
+        cursor: pointer;
+
+        &.-checked {
+            &:before,
+            &:after {
+                display: block;
+                content: "";
+                position: absolute;
+                box-sizing: border-box;
+            }
+        }
+
+        &.-positive {
+            left: 8px;
+
+            &:after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -65%) rotate(-45deg);
+                width: 10px;
+                height: 6px;
+                border-bottom: solid 3px #42b983;
+                border-left: solid 3px #42b983;
+            }
+        }
+
+        &.-negative {
+            left: 33px;
+
+            &:before {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -65%) rotate(45deg);
+                width: 11px;
+                height: 3px;
+                background-color: indianred;
+            }
+
+            &:after {
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -65%) rotate(-45deg);
+                width: 11px;
+                height: 3px;
+                background-color: indianred;
+            }
+        }
+    }
+}
