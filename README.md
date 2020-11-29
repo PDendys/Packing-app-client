@@ -1,4 +1,6 @@
-# my-app
+# PackingList client app
+
+This is client layer for PackingList app based on Vue framework
 
 ## Project setup
 ```
